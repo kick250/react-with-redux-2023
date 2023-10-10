@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  gap: 50px;
+  background-color: cornflowerblue;
+  padding: 34px;
+}
+
+.header h1 {
+  color: white;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.links a {
+  color: white;
+}

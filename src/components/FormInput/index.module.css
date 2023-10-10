@@ -1,0 +1,12 @@
+.input {
+  width: 30%;
+}
+
+.input label {
+  display: block;
+}
+
+.input input {
+  padding: 4px;
+  width: 100%;
+}
