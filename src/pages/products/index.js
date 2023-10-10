@@ -4,7 +4,7 @@ import styles from './index.module.css';
 
 export default function Products() {
   const products = useSelector(state => state.products);
-  console.log(products)
+
   return (
     <div>
       <h2 style={{textAlign: 'center', margin: 24}}>Lista de produtos</h2>

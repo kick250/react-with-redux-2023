@@ -2,7 +2,7 @@ import { useState } from "react"
 import FormInput from "../FormInput";
 import styles from './index.module.css';
 
-export default function ProductForm() {
+export default function ProductForm({ onCreate }) {
   const [name, setName] = useState('')
   const [price, setPrice] = useState(0.0)
   const [imageLink, setImageLink] = useState('')
@@ -10,11 +10,12 @@ export default function ProductForm() {
   function onSave(event) {
     event.preventDefault();
     const product = {
+      id: Date.now(),
       name,
       price,
       imageLink
     }
-    console.log(product)
+    onCreate(product)
   }
 
   return (
