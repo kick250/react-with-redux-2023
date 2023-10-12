@@ -3,9 +3,7 @@
   gap: 50px;
   background-color: cornflowerblue;
   padding: 34px;
-}
-
-.header h1 {
+  align-items: center;
   color: white;
 }
 
