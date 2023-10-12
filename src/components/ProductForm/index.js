@@ -2,24 +2,25 @@ import { useState } from "react"
 import FormInput from "../FormInput";
 import styles from './index.module.css';
 
-export default function ProductForm({ onCreate }) {
-  const [name, setName] = useState('')
-  const [price, setPrice] = useState(0.0)
-  const [imageLink, setImageLink] = useState('')
+export default function ProductForm({ onSave, product }) {
+  const productId = product?.id
+  const [name, setName] = useState(product?.name || '');
+  const [price, setPrice] = useState(product?.price || 0.0);
+  const [imageLink, setImageLink] = useState(product?.imageLink || '');
 
-  function onSave(event) {
+  function onSubmit(event) {
     event.preventDefault();
     const product = {
-      id: Date.now(),
+      id: productId || Date.now(),
       name,
       price,
       imageLink
     }
-    onCreate(product)
+    onSave(product)
   }
 
   return (
-    <form onSubmit={onSave} className={styles.form}>
+    <form onSubmit={onSubmit} className={styles.form}>
       <FormInput
         label='Name'
         placeholder='Nome do produto'

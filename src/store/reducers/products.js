@@ -12,10 +12,17 @@ const productsSlice = createSlice({
   reducers: {
     addProduct: (state, {payload}) => {
       state.push(payload);
+    },
+    updateProduct: (state, {payload}) => {
+      state.forEach((product, index) => {
+        if (product.id === payload.id) {
+          state[index] = payload;
+        }
+      });
     }
   }
 })
 
-export const { addProduct }  = productsSlice.actions;
+export const { addProduct, updateProduct }  = productsSlice.actions;
 
 export default productsSlice;

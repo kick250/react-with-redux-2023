@@ -1,6 +1,7 @@
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   border: 2px solid black ;
   border-radius: 10px;
@@ -11,4 +12,6 @@
 .card img {
   width: 200px;
   height: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }

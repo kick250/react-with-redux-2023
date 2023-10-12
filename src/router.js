@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import New from "./pages/New";
 import Products from "./pages/Products";
 import Header from "./components/Header";
+import EditProduct from "./pages/EditProduct";
 
 export default function Router() {
   return (
@@ -11,6 +12,7 @@ export default function Router() {
         <Route path="/" element={<New />} />
         <Route path="/new" element={<New />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/:productId" element={<EditProduct />} />
         <Route path="*" element={<h1>Rota não encontrada</h1>} />
       </Routes>
     </BrowserRouter>
