@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import New from "./pages/New";
-import Products from "./pages/Products";
+import New from "./pages/new";
+import Products from "./pages/products";
 import EditProduct from "./pages/EditProduct";
 import DefaultPage from "./components/DefaultPage";
 
